@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Sphere, Box, Octahedron } from '@react-three/drei'
 import * as THREE from 'three'
 
 export function FloatingObjects() {
@@ -41,7 +40,8 @@ export function FloatingObjects() {
   return (
     <group ref={groupRef}>
       {/* Main floating sphere */}
-      <Sphere ref={sphere1Ref} args={[0.8, 32, 32]} position={[-2, 0, 0]}>
+      <mesh ref={sphere1Ref} position={[-2, 0, 0]}>
+        <sphereGeometry args={[0.8, 32, 32]} />
         <meshStandardMaterial
           color="#00bfff"
           roughness={0.2}
@@ -49,10 +49,11 @@ export function FloatingObjects() {
           emissive="#00bfff"
           emissiveIntensity={0.1}
         />
-      </Sphere>
+      </mesh>
       
       {/* Secondary sphere */}
-      <Sphere ref={sphere2Ref} args={[0.5, 32, 32]} position={[2.5, 1, -1]}>
+      <mesh ref={sphere2Ref} position={[2.5, 1, -1]}>
+        <sphereGeometry args={[0.5, 32, 32]} />
         <meshStandardMaterial
           color="#9d4edd"
           roughness={0.3}
@@ -60,10 +61,11 @@ export function FloatingObjects() {
           emissive="#9d4edd"
           emissiveIntensity={0.1}
         />
-      </Sphere>
+      </mesh>
       
       {/* Rotating box */}
-      <Box ref={boxRef} args={[0.6, 0.6, 0.6]} position={[0, -1.5, 1]}>
+      <mesh ref={boxRef} position={[0, -1.5, 1]}>
+        <boxGeometry args={[0.6, 0.6, 0.6]} />
         <meshStandardMaterial
           color="#50fa7b"
           roughness={0.4}
@@ -71,10 +73,11 @@ export function FloatingObjects() {
           emissive="#50fa7b"
           emissiveIntensity={0.05}
         />
-      </Box>
+      </mesh>
       
       {/* Octahedron */}
-      <Octahedron ref={octahedronRef} args={[0.4]} position={[-1, 1.5, 1.5]}>
+      <mesh ref={octahedronRef} position={[-1, 1.5, 1.5]}>
+        <octahedronGeometry args={[0.4]} />
         <meshStandardMaterial
           color="#ff6b6b"
           roughness={0.2}
@@ -82,25 +85,25 @@ export function FloatingObjects() {
           emissive="#ff6b6b"
           emissiveIntensity={0.1}
         />
-      </Octahedron>
+      </mesh>
       
       {/* Ambient particles */}
       {Array.from({ length: 20 }).map((_, i) => (
-        <Sphere
+        <mesh
           key={i}
-          args={[0.02, 8, 8]}
           position={[
             (Math.random() - 0.5) * 10,
             (Math.random() - 0.5) * 10,
             (Math.random() - 0.5) * 10
           ]}
         >
+          <sphereGeometry args={[0.02, 8, 8]} />
           <meshStandardMaterial
             color="#00bfff"
             emissive="#00bfff"
             emissiveIntensity={0.5}
           />
-        </Sphere>
+        </mesh>
       ))}
     </group>
   )
