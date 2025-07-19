@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Portfolio Design System - Modern Tech Colors with Gradients and Animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Background Colors */
+    --background: 220 25% 6%;
+    --foreground: 210 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card System */
+    --card: 220 20% 8%;
+    --card-foreground: 210 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* UI Elements */
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand - Cyan/Blue Tech Gradient */
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 195 100% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Purple Accent */
+    --secondary: 270 90% 60%;
+    --secondary-foreground: 210 15% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Elements */
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Green Success */
+    --accent: 150 80% 50%;
+    --accent-foreground: 220 25% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 210 15% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and Inputs */
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 195 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(270 90% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 90% 60%), hsl(195 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(150 80% 50%), hsl(195 100% 50%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 25% 6%), hsl(220 20% 8%));
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
+    --shadow-card: 0 10px 30px hsl(220 25% 6% / 0.5);
+    --shadow-elegant: 0 20px 60px hsl(195 100% 50% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +124,78 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply relative overflow-hidden bg-transparent border-2 border-primary text-primary font-semibold py-3 px-8 rounded-lg;
+    background: linear-gradient(135deg, transparent, hsl(195 100% 50% / 0.1));
+    transition: var(--transition-smooth);
+    box-shadow: 0 0 20px hsl(195 100% 50% / 0.2);
+  }
+  
+  .btn-hero:hover {
+    @apply border-primary-glow text-primary-foreground;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold py-3 px-8 rounded-lg;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Card Enhancements */
+  .card-glow {
+    @apply bg-card border border-border rounded-xl p-6;
+    background: linear-gradient(135deg, hsl(220 20% 8%), hsl(220 15% 10%));
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .card-glow:hover {
+    box-shadow: var(--shadow-elegant);
+    transform: translateY(-4px);
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse Animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(195 100% 50% / 0.2); }
+    50% { box-shadow: 0 0 40px hsl(195 100% 50% / 0.4); }
   }
 }
