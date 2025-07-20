@@ -22,52 +22,52 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <Card className="card-glow p-8">
-                <h2 className="text-2xl font-bold text-gradient-primary mb-6">
+            <div className="space-y-6 lg:space-y-8">
+              <Card className="card-glow p-6 lg:p-8">
+                <h2 className="text-xl lg:text-2xl font-bold text-gradient-primary mb-6">
                   Let's Connect
                 </h2>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Mail className="w-6 h-6 text-primary" />
+                <div className="space-y-4 lg:space-y-6">
+                  <div className="flex items-start sm:items-center gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                      <Mail className="w-5 lg:w-6 h-5 lg:h-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="text-muted-foreground">yelchuru.guhapranav2022@vitstudent.ac.in</p>
+                      <p className="text-muted-foreground text-sm lg:text-base break-all">yelchuru.guhapranav2022@vitstudent.ac.in</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-secondary/10 rounded-lg">
-                      <Phone className="w-6 h-6 text-secondary" />
+                    <div className="p-3 bg-secondary/10 rounded-lg flex-shrink-0">
+                      <Phone className="w-5 lg:w-6 h-5 lg:h-6 text-secondary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
-                      <p className="text-muted-foreground">+91 9686953131</p>
+                      <p className="text-muted-foreground text-sm lg:text-base">+91 9686953131</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-accent/10 rounded-lg">
-                      <MapPin className="w-6 h-6 text-accent" />
+                    <div className="p-3 bg-accent/10 rounded-lg flex-shrink-0">
+                      <MapPin className="w-5 lg:w-6 h-5 lg:h-6 text-accent" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Location</h3>
-                      <p className="text-muted-foreground">Kanchepuram/Chennai</p>
+                      <p className="text-muted-foreground text-sm lg:text-base">Kanchepuram/Chennai</p>
                     </div>
                   </div>
                 </div>
               </Card>
 
               {/* Social Links */}
-              <Card className="card-glow p-8">
-                <h3 className="text-xl font-bold text-gradient-accent mb-6">
+              <Card className="card-glow p-6 lg:p-8">
+                <h3 className="text-lg lg:text-xl font-bold text-gradient-accent mb-6">
                   Find Me Online
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <a 
                     href="https://linkedin.com/in/y-guha-pranav-5a90b4260" 
                     target="_blank" 
@@ -115,18 +115,18 @@ export default function Contact() {
               </Card>
 
               {/* 3D Scene */}
-              <div className="h-64 rounded-xl overflow-hidden">
+              <div className="h-48 lg:h-64 rounded-xl overflow-hidden">
                 <Scene3D className="w-full h-full" />
               </div>
             </div>
 
             {/* Contact Form */}
-            <Card className="card-glow p-8">
-              <h2 className="text-2xl font-bold text-gradient-primary mb-6">
+            <Card className="card-glow p-6 lg:p-8">
+              <h2 className="text-xl lg:text-2xl font-bold text-gradient-primary mb-6">
                 Send Me a Message
               </h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form className="space-y-4 lg:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name
