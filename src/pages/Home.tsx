@@ -10,18 +10,18 @@ import profilePhoto from '@/assets/profile-photo.jpg'
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
         {/* Background 3D Scene */}
         <div className="absolute inset-0 opacity-30">
           <Scene3D className="w-full h-full" />
         </div>
       
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            {/* Hero Content */}
-            <div className="text-center lg:text-left flex-1 space-y-6">
+        {/* Foreground Content */}
+        <div className="relative z-10 max-w-7xl w-full mx-auto flex flex-col items-center justify-center gap-12 py-8">
+          {/* Hero Row */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
+            {/* Left: Hero Content */}
+            <div className="text-center lg:text-left flex-1 max-w-xl space-y-6">
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   Hi, I'm <span className="text-gradient-primary">Guha Pranav</span>
@@ -29,7 +29,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
                   AI/ML Engineer & Full Stack Developer
                 </h2>
-                <p className="text-base sm:text-lg text-muted-foreground max-w-xl">
+                <p className="text-base sm:text-lg text-muted-foreground">
                   Computer Science student at VIT Chennai with a passion for artificial intelligence, 
                   machine learning, and web development. Building innovative solutions with cutting-edge technology.
                 </p>
@@ -72,44 +72,45 @@ export default function Home() {
               </div>
             </div>
       
-            {/* Profile Picture */}
+            {/* Right: Profile Picture */}
             <div className="flex-1 flex justify-center">
               <AnimatedPicture 
                 src={profilePhoto}
                 alt="Guha Pranav - AI/ML Engineer"
-                className="w-64 h-64 lg:w-80 lg:h-80 shadow-elegant rounded-full object-cover"
+                className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 shadow-elegant rounded-full object-cover"
               />
             </div>
           </div>
       
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 lg:mt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl w-full justify-center items-center">
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-              <Code className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
-              <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">500+</h3>
+              <Code className="w-8 lg:w-10 h-8 lg:h-10 text-primary mx-auto mb-2 lg:mb-3" />
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">500+</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">Lines of Code</p>
             </Card>
       
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-              <Brain className="w-8 lg:w-12 h-8 lg:h-12 text-secondary mx-auto mb-2 lg:mb-4" />
-              <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">AI/ML</h3>
+              <Brain className="w-8 lg:w-10 h-8 lg:h-10 text-secondary mx-auto mb-2 lg:mb-3" />
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-accent">AI/ML</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">Specialist</p>
             </Card>
       
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-              <Globe className="w-8 lg:w-12 h-8 lg:h-12 text-accent mx-auto mb-2 lg:mb-4" />
-              <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">Full Stack</h3>
+              <Globe className="w-8 lg:w-10 h-8 lg:h-10 text-accent mx-auto mb-2 lg:mb-3" />
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">Full Stack</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">Developer</p>
             </Card>
       
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-              <ExternalLink className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
-              <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">9.47</h3>
+              <ExternalLink className="w-8 lg:w-10 h-8 lg:h-10 text-primary mx-auto mb-2 lg:mb-3" />
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-accent">9.47</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">CGPA</p>
             </Card>
           </div>
         </div>
       </section>
+
 
       {/* About Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
