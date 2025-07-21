@@ -19,135 +19,99 @@ export default function Home() {
         
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
-              <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Hi, I'm{' '}
-                  <span className="text-gradient-primary">Guha Pranav</span>
-                </h1>
-                <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
-                  AI/ML Engineer & Full Stack Developer
-                </h2>
-                <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                  Computer Science student at VIT Chennai with a passion for artificial intelligence, 
-                  machine learning, and web development. Building innovative solutions with cutting-edge technology.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link to="/projects" className="w-full sm:w-auto">
-                  <Button className="btn-hero w-full sm:w-auto">
-                    <FolderOpen className="w-5 h-5 mr-2" />
-                    View Projects
-                  </Button>
-                </Link>
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <Button className="btn-secondary w-full sm:w-auto">
-                    Contact Me
-                  </Button>
-                </Link>
-              </div>
-              
-              <div className="flex gap-4 justify-center lg:justify-start">
-                <a 
-                  href="https://linkedin.com/in/y-guha-pranav-5a90b4260" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-3 bg-card rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-110"
-                >
-                  <Linkedin className="w-6 h-6 text-primary" />
-                </a>
-                <a 
-                  href="https://github.com/y-guha-pranav-5a90b4260" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-3 bg-card rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-110"
-                >
-                  <Github className="w-6 h-6 text-primary" />
-                </a>
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="p-3"
-                >
-                  <Download className="w-6 h-6" />
+          <div className="text-center space-y-6 lg:space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Hi, I'm{' '}
+                <span className="text-gradient-primary">Guha Pranav</span>
+              </h1>
+              <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
+                AI/ML Engineer & Full Stack Developer
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+                Computer Science student at VIT Chennai with a passion for artificial intelligence, 
+                machine learning, and web development. Building innovative solutions with cutting-edge technology.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/projects">
+                <Button className="btn-hero w-full sm:w-auto">
+                  <FolderOpen className="w-5 h-5 mr-2" />
+                  View Projects
                 </Button>
-              </div>
+              </Link>
+              <Link to="/contact">
+                <Button className="btn-secondary w-full sm:w-auto">
+                  Contact Me
+                </Button>
+              </Link>
             </div>
             
-            {/* Animated Profile Picture - Desktop */}
-            <div className="hidden lg:flex justify-center">
-              <AnimatedPicture 
-                src={profilePhoto}
-                alt="Guha Pranav - AI/ML Engineer"
-                className="w-80 h-80 shadow-elegant"
-              />
+            <div className="flex gap-4 justify-center">
+              <a 
+                href="https://linkedin.com/in/y-guha-pranav-5a90b4260" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 bg-card rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin className="w-6 h-6 text-primary" />
+              </a>
+              <a 
+                href="https://github.com/y-guha-pranav-5a90b4260" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 bg-card rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              >
+                <Github className="w-6 h-6 text-primary" />
+              </a>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="p-3"
+              >
+                <Download className="w-6 h-6" />
+              </Button>
             </div>
           </div>
 
-          {/* Stats Cards - Mobile/Tablet */}
-          <div className="grid grid-cols-2 gap-4 lg:hidden mt-8">
-            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
-              <Code className="w-8 h-8 text-primary mx-auto mb-2" />
-              <h3 className="text-lg font-bold text-gradient-primary">500+</h3>
-              <p className="text-xs text-muted-foreground">Lines of Code</p>
+          {/* Stats Cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12 lg:mt-16 max-w-4xl mx-auto">
+            <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
+              <Code className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
+              <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">500+</h3>
+              <p className="text-xs lg:text-sm text-muted-foreground">Lines of Code</p>
             </Card>
             
-            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
-              <Brain className="w-8 h-8 text-secondary mx-auto mb-2" />
-              <h3 className="text-lg font-bold text-gradient-accent">AI/ML</h3>
-              <p className="text-xs text-muted-foreground">Specialist</p>
+            <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
+              <Brain className="w-8 lg:w-12 h-8 lg:h-12 text-secondary mx-auto mb-2 lg:mb-4" />
+              <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">AI/ML</h3>
+              <p className="text-xs lg:text-sm text-muted-foreground">Specialist</p>
             </Card>
             
-            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
-              <Globe className="w-8 h-8 text-accent mx-auto mb-2" />
-              <h3 className="text-lg font-bold text-gradient-primary">Full Stack</h3>
-              <p className="text-xs text-muted-foreground">Developer</p>
+            <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
+              <Globe className="w-8 lg:w-12 h-8 lg:h-12 text-accent mx-auto mb-2 lg:mb-4" />
+              <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">Full Stack</h3>
+              <p className="text-xs lg:text-sm text-muted-foreground">Developer</p>
             </Card>
             
-            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
-              <ExternalLink className="w-8 h-8 text-primary mx-auto mb-2" />
-              <h3 className="text-lg font-bold text-gradient-accent">9.47</h3>
-              <p className="text-xs text-muted-foreground">CGPA</p>
+            <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
+              <ExternalLink className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
+              <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">9.47</h3>
+              <p className="text-xs lg:text-sm text-muted-foreground">CGPA</p>
             </Card>
-          </div>
-
-          {/* Animated Profile Picture - Mobile/Tablet */}
-          <div className="lg:hidden flex justify-center mt-8">
-            <AnimatedPicture 
-              src={profilePhoto}
-              alt="Guha Pranav - AI/ML Engineer"
-              className="w-64 h-64 shadow-elegant"
-            />
           </div>
         </div>
+      </section>
 
-        {/* Stats Section - Desktop */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto relative z-10">
-          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
-            <Code className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gradient-primary">500+</h3>
-            <p className="text-sm text-muted-foreground">Lines of Code</p>
-          </Card>
-          
-          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
-            <Brain className="w-12 h-12 text-secondary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gradient-accent">AI/ML</h3>
-            <p className="text-sm text-muted-foreground">Specialist</p>
-          </Card>
-          
-          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
-            <Globe className="w-12 h-12 text-accent mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gradient-primary">Full Stack</h3>
-            <p className="text-sm text-muted-foreground">Developer</p>
-          </Card>
-          
-          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
-            <ExternalLink className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gradient-accent">9.47</h3>
-            <p className="text-sm text-muted-foreground">CGPA</p>
-          </Card>
+      {/* Profile Picture Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <AnimatedPicture 
+            src={profilePhoto}
+            alt="Guha Pranav - AI/ML Engineer"
+            className="w-64 h-64 lg:w-80 lg:h-80 mx-auto shadow-elegant"
+          />
         </div>
       </section>
 
