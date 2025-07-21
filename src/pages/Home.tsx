@@ -81,7 +81,7 @@ export default function Home() {
               <AnimatedPicture 
                 src={profilePhoto}
                 alt="Guha Pranav - AI/ML Engineer"
-                className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 shadow-elegant rounded-2xl object-cover"
+                className="shadow-elegant rounded-xl object-cover"
               />
             </div>
           </div>
