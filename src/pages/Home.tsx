@@ -71,6 +71,7 @@ export default function Home() {
                 </a>
                 <Button variant="outline" size="sm" className="p-3">
                   <Download className="w-6 h-6" />
+                  Resume
                 </Button>
               </div>
             </div>
