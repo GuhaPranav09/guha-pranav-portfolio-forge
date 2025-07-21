@@ -24,7 +24,10 @@ export default function Home() {
             <div className="text-center lg:text-left flex-1 max-w-xl space-y-6">
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Hi, I'm <span className="text-gradient-primary">Guha Pranav</span>
+                  Hi, I'm 
+                </h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-gradient-primary">Guha Pranav</span>
                 </h1>
                 <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
                   AI/ML Engineer & Full Stack Developer
