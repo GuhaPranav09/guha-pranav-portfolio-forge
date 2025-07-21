@@ -2,7 +2,9 @@ import { Layout } from '@/components/layout/Layout'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Award, ExternalLink, Star, Code, Brain, Database, Shield } from 'lucide-react'
+import { useState } from 'react'
 
 const certifications = [
   {
@@ -12,7 +14,8 @@ const certifications = [
     description: "Professional certificate covering machine learning, deep learning, and AI engineering practices.",
     skills: ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch"],
     icon: Brain,
-    color: "primary"
+    color: "primary",
+    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
   },
   {
     title: "Postman Student Developer",
@@ -21,7 +24,8 @@ const certifications = [
     description: "API development and testing certification with hands-on experience in API design.",
     skills: ["API Development", "REST APIs", "Testing", "Documentation"],
     icon: Code,
-    color: "secondary"
+    color: "secondary",
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
   },
   {
     title: "IBM Docker Essentials",
@@ -30,7 +34,8 @@ const certifications = [
     description: "Containerization and Docker fundamentals for modern application deployment.",
     skills: ["Docker", "Containerization", "DevOps", "Deployment"],
     icon: Shield,
-    color: "accent"
+    color: "accent",
+    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
   },
   {
     title: "Oracle GenAI",
@@ -39,7 +44,8 @@ const certifications = [
     description: "Generative AI and large language model implementation and optimization.",
     skills: ["Generative AI", "LLMs", "Oracle Cloud", "AI Ethics"],
     icon: Brain,
-    color: "primary"
+    color: "primary",
+    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
   }
 ]
 
@@ -106,22 +112,42 @@ export default function Certifications() {
                 return (
                   <Card key={index} className="card-glow p-6 hover:scale-105 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className={`p-3 rounded-xl ${
-                        cert.color === 'primary' ? 'bg-primary/10' :
-                        cert.color === 'secondary' ? 'bg-secondary/10' : 
-                        'bg-accent/10'
-                      }`}>
-                        <IconComponent className={`w-6 h-6 ${
-                          cert.color === 'primary' ? 'text-primary' :
-                          cert.color === 'secondary' ? 'text-secondary' : 
-                          'text-accent'
-                        }`} />
-                      </div>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <div className="cursor-pointer">
+                            <img 
+                              src={cert.thumbnail} 
+                              alt={`${cert.title} certificate`}
+                              className="w-20 h-15 object-cover rounded-lg hover:opacity-80 transition-opacity"
+                            />
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl">
+                          <img 
+                            src={cert.thumbnail} 
+                            alt={`${cert.title} certificate full size`}
+                            className="w-full h-auto rounded-lg"
+                          />
+                        </DialogContent>
+                      </Dialog>
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gradient-primary mb-1">
-                          {cert.title}
-                        </h3>
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`p-2 rounded-lg ${
+                            cert.color === 'primary' ? 'bg-primary/10' :
+                            cert.color === 'secondary' ? 'bg-secondary/10' : 
+                            'bg-accent/10'
+                          }`}>
+                            <IconComponent className={`w-5 h-5 ${
+                              cert.color === 'primary' ? 'text-primary' :
+                              cert.color === 'secondary' ? 'text-secondary' : 
+                              'text-accent'
+                            }`} />
+                          </div>
+                          <h3 className="text-xl font-semibold text-gradient-primary">
+                            {cert.title}
+                          </h3>
+                        </div>
+                        <div className="flex items-center justify-between mb-3">
                           <span className="text-foreground font-medium">{cert.issuer}</span>
                           <Badge variant="secondary">{cert.date}</Badge>
                         </div>
