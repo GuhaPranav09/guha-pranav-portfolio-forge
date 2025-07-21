@@ -254,10 +254,16 @@ export default function Projects() {
                 Check out my GitHub for the latest updates and contributions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-hero">
-                  <Github className="w-5 h-5 mr-2" />
-                  View All Projects
-                </Button>
+                <a 
+                  href="https://github.com/GuhaPranav09" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="btn-hero">
+                    <Github className="w-5 h-5 mr-2" />
+                    View All Projects
+                  </Button>
+                </a>
                 
                 <Link to="/contact">
                   <Button variant="outline">
