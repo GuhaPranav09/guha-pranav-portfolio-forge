@@ -53,8 +53,8 @@ export function AnimatedPicture({ src, alt, className = "" }: AnimatedPicturePro
             alt={alt}
             className="w-full h-full object-cover"
             style={{
-              mask: `radial-gradient(circle 80px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`,
-              WebkitMask: `radial-gradient(circle 80px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`
+              mask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`,
+              WebkitMask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`
             }}
           />
         </div>
