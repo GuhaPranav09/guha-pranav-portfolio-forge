@@ -2,8 +2,10 @@ import { Layout } from '@/components/layout/Layout'
 import { Scene3D } from '@/components/three/Scene3D'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { AnimatedPicture } from '@/components/ui/animated-picture'
 import { Github, Linkedin, ExternalLink, Download, Code, Brain, Globe, FolderOpen } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import profilePhoto from '@/assets/profile-photo.jpg'
 
 export default function Home() {
   return (
@@ -74,33 +76,78 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-8 lg:mt-0">
-              <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-                <Code className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
-                <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">500+</h3>
-                <p className="text-xs lg:text-sm text-muted-foreground">Lines of Code</p>
-              </Card>
-              
-              <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-                <Brain className="w-8 lg:w-12 h-8 lg:h-12 text-secondary mx-auto mb-2 lg:mb-4" />
-                <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">AI/ML</h3>
-                <p className="text-xs lg:text-sm text-muted-foreground">Specialist</p>
-              </Card>
-              
-              <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-                <Globe className="w-8 lg:w-12 h-8 lg:h-12 text-accent mx-auto mb-2 lg:mb-4" />
-                <h3 className="text-lg lg:text-2xl font-bold text-gradient-primary">Full Stack</h3>
-                <p className="text-xs lg:text-sm text-muted-foreground">Developer</p>
-              </Card>
-              
-              <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
-                <ExternalLink className="w-8 lg:w-12 h-8 lg:h-12 text-primary mx-auto mb-2 lg:mb-4" />
-                <h3 className="text-lg lg:text-2xl font-bold text-gradient-accent">9.47</h3>
-                <p className="text-xs lg:text-sm text-muted-foreground">CGPA</p>
-              </Card>
+            {/* Animated Profile Picture - Desktop */}
+            <div className="hidden lg:flex justify-center">
+              <AnimatedPicture 
+                src={profilePhoto}
+                alt="Guha Pranav - AI/ML Engineer"
+                className="w-80 h-80 shadow-elegant"
+              />
             </div>
           </div>
+
+          {/* Stats Cards - Mobile/Tablet */}
+          <div className="grid grid-cols-2 gap-4 lg:hidden mt-8">
+            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
+              <Code className="w-8 h-8 text-primary mx-auto mb-2" />
+              <h3 className="text-lg font-bold text-gradient-primary">500+</h3>
+              <p className="text-xs text-muted-foreground">Lines of Code</p>
+            </Card>
+            
+            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
+              <Brain className="w-8 h-8 text-secondary mx-auto mb-2" />
+              <h3 className="text-lg font-bold text-gradient-accent">AI/ML</h3>
+              <p className="text-xs text-muted-foreground">Specialist</p>
+            </Card>
+            
+            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
+              <Globe className="w-8 h-8 text-accent mx-auto mb-2" />
+              <h3 className="text-lg font-bold text-gradient-primary">Full Stack</h3>
+              <p className="text-xs text-muted-foreground">Developer</p>
+            </Card>
+            
+            <Card className="card-glow text-center p-4 hover:scale-105 transition-all duration-300">
+              <ExternalLink className="w-8 h-8 text-primary mx-auto mb-2" />
+              <h3 className="text-lg font-bold text-gradient-accent">9.47</h3>
+              <p className="text-xs text-muted-foreground">CGPA</p>
+            </Card>
+          </div>
+
+          {/* Animated Profile Picture - Mobile/Tablet */}
+          <div className="lg:hidden flex justify-center mt-8">
+            <AnimatedPicture 
+              src={profilePhoto}
+              alt="Guha Pranav - AI/ML Engineer"
+              className="w-64 h-64 shadow-elegant"
+            />
+          </div>
+        </div>
+
+        {/* Stats Section - Desktop */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto relative z-10">
+          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
+            <Code className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-gradient-primary">500+</h3>
+            <p className="text-sm text-muted-foreground">Lines of Code</p>
+          </Card>
+          
+          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
+            <Brain className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-gradient-accent">AI/ML</h3>
+            <p className="text-sm text-muted-foreground">Specialist</p>
+          </Card>
+          
+          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
+            <Globe className="w-12 h-12 text-accent mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-gradient-primary">Full Stack</h3>
+            <p className="text-sm text-muted-foreground">Developer</p>
+          </Card>
+          
+          <Card className="card-glow text-center p-6 hover:scale-105 transition-all duration-300">
+            <ExternalLink className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-gradient-accent">9.47</h3>
+            <p className="text-sm text-muted-foreground">CGPA</p>
+          </Card>
         </div>
       </section>
 
