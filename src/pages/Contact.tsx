@@ -1,3 +1,7 @@
+
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 import { Layout } from '@/components/layout/Layout'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -7,6 +11,29 @@ import { Scene3D } from '@/components/three/Scene3D'
 import { Mail, Phone, MapPin, Linkedin, Github, Send, ExternalLink, Code, Award} from 'lucide-react'
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [sending, setSending] = useState(false);
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current!,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      toast.success('Message sent!');
+      formRef.current?.reset();
+    } catch (error) {
+      toast.error('Failed to send message');
+      console.error(error);
+    } finally {
+      setSending(false);
+    }
+  };
   return (
     <Layout>
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -137,13 +164,14 @@ export default function Contact() {
               <h2 className="text-xl lg:text-2xl font-bold text-gradient-primary mb-6">
                 Send Me a Message
               </h2>
-              <form className="space-y-4 lg:space-y-6">
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-4 lg:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
                     <Input 
+                      name="first_name"
                       placeholder="John" 
                       className="bg-muted border-border focus:border-primary"
                     />
@@ -153,6 +181,7 @@ export default function Contact() {
                       Last Name
                     </label>
                     <Input 
+                      name="last_name"
                       placeholder="Doe" 
                       className="bg-muted border-border focus:border-primary"
                     />
@@ -164,6 +193,7 @@ export default function Contact() {
                     Email
                   </label>
                   <Input 
+                    name="user_email"
                     type="email" 
                     placeholder="john.doe@example.com" 
                     className="bg-muted border-border focus:border-primary"
@@ -175,6 +205,7 @@ export default function Contact() {
                     Subject
                   </label>
                   <Input 
+                    name="subject"
                     placeholder="Let's discuss a project" 
                     className="bg-muted border-border focus:border-primary"
                   />
@@ -185,6 +216,7 @@ export default function Contact() {
                     Message
                   </label>
                   <Textarea 
+                    name="message"
                     placeholder="Hi Pranav, I'd like to discuss..."
                     rows={6}
                     className="bg-muted border-border focus:border-primary resize-none"
@@ -193,7 +225,7 @@ export default function Contact() {
                 
                 <Button className="btn-hero w-full">
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {sending ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
               
