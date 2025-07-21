@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ExternalLink, Github, Database, Brain, MessageSquare, Activity, ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const projects = [
   {
