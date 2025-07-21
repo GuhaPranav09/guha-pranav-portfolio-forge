@@ -123,11 +123,11 @@ export default function Experience() {
           {/* Summary Stats */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="card-glow text-center p-6">
-              <h3 className="text-3xl font-bold text-gradient-primary mb-2">5+</h3>
+              <h3 className="text-3xl font-bold text-gradient-primary mb-2">5</h3>
               <p className="text-muted-foreground">Companies</p>
             </Card>
             <Card className="card-glow text-center p-6">
-              <h3 className="text-3xl font-bold text-gradient-accent mb-2">2+</h3>
+              <h3 className="text-3xl font-bold text-gradient-accent mb-2">1+</h3>
               <p className="text-muted-foreground">Years Experience</p>
             </Card>
             <Card className="card-glow text-center p-6">

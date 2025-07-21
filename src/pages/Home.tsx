@@ -6,6 +6,9 @@ import { AnimatedPicture } from '@/components/ui/animated-picture'
 import { Github, Linkedin, ExternalLink, Download, Code, Brain, Globe, FolderOpen } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import profilePhoto from '@/assets/profile-photo.jpg'
+import profilePhoto2 from '@/assets/profile-photo2.jpg'
+
+
 
 export default function Home() {
   return (
@@ -62,17 +65,19 @@ export default function Home() {
                   <Linkedin className="w-6 h-6 text-primary" />
                 </a>
                 <a 
-                  href="https://github.com/y-guha-pranav-5a90b4260" 
+                  href="https://github.com/GuhaPranav09" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-card rounded-lg hover:bg-primary/10 transition-all duration-300 hover:scale-110"
                 >
                   <Github className="w-6 h-6 text-primary" />
                 </a>
-                <Button variant="outline" size="sm" className="p-3">
-                  <Download className="w-6 h-6" />
-                  Resume
-                </Button>
+                <a href="/resume.pdf" download>
+                  <Button variant="outline" size="sm" className="p-3">
+                    <Download className="w-6 h-6" />
+                    Resume
+                  </Button>
+                </a>
               </div>
             </div>
       
@@ -80,6 +85,7 @@ export default function Home() {
             <div className="flex-1 flex justify-center">
               <AnimatedPicture 
                 src={profilePhoto}
+                src2={profilePhoto2}
                 alt="Guha Pranav - AI/ML Engineer"
                 className="w-48 h-64 md:w-54 md:h-72 lg:w-60 lg:h-80 shadow-elegant rounded-xl object-cover"
               />
@@ -90,7 +96,7 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl w-full justify-center items-center">
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
               <Code className="w-8 lg:w-10 h-8 lg:h-10 text-primary mx-auto mb-2 lg:mb-3" />
-              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">500+</h3>
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">10K+</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">Lines of Code</p>
             </Card>
       
@@ -102,7 +108,7 @@ export default function Home() {
       
             <Card className="card-glow text-center p-4 lg:p-6 hover:scale-105 transition-all duration-300">
               <Globe className="w-8 lg:w-10 h-8 lg:h-10 text-accent mx-auto mb-2 lg:mb-3" />
-              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">Full Stack</h3>
+              <h3 className="text-lg lg:text-xl font-bold text-gradient-primary">Web</h3>
               <p className="text-xs lg:text-sm text-muted-foreground">Developer</p>
             </Card>
       
@@ -145,7 +151,7 @@ export default function Home() {
             <Card className="card-glow p-6 lg:p-8">
               <h3 className="text-lg lg:text-xl font-semibold text-gradient-accent mb-4">💼 Experience</h3>
               <p className="text-muted-foreground mb-4 text-sm lg:text-base">
-                Internships at leading companies including HCL Technologies, Samsung PRISM, and CoreNuts Technologies.
+                Internships at various companies including Samsung Prism and Deepcept AI.
               </p>
               <Link to="/experience">
                 <Button variant="outline" size="sm" className="w-full sm:w-auto">
@@ -157,7 +163,7 @@ export default function Home() {
             <Card className="card-glow p-6 lg:p-8 md:col-span-2 lg:col-span-1">
               <h3 className="text-lg lg:text-xl font-semibold text-gradient-primary mb-4">🚀 Projects</h3>
               <p className="text-muted-foreground mb-4 text-sm lg:text-base">
-                Built innovative solutions including ERP systems, AI chatbots, and basketball game tracking systems.
+                Built innovative solutions including ERP systems, AI chatbots, and deep learning models.
               </p>
               <Link to="/projects">
                 <Button variant="outline" size="sm" className="w-full sm:w-auto">

@@ -2,11 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 
 interface AnimatedPictureProps {
   src: string
+  src2: string
   alt: string
   className?: string
 }
 
-export function AnimatedPicture({ src, alt, className = "" }: AnimatedPictureProps) {
+export function AnimatedPicture({ src, src2, alt, className = "" }: AnimatedPictureProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const imageRef = useRef<HTMLDivElement>(null)
@@ -40,7 +41,7 @@ export function AnimatedPicture({ src, alt, className = "" }: AnimatedPicturePro
       <img
         src={src}
         alt={alt}
-        className="w-full h-full object-cover filter grayscale transition-transform duration-300 hover:scale-105"
+        className="w-full h-full object-cover hover:scale-105"
       />
 
       {/* Colored reveal circle — only that part becomes colored */}
@@ -49,12 +50,12 @@ export function AnimatedPicture({ src, alt, className = "" }: AnimatedPicturePro
           className="absolute inset-0 pointer-events-none"
         >
           <img
-            src={src}
+            src={src2}
             alt={alt}
             className="w-full h-full object-cover"
             style={{
-              mask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`,
-              WebkitMask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, black 30%, transparent 100%)`
+              mask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`,
+              WebkitMask: `radial-gradient(circle 120px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`
             }}
           />
         </div>

@@ -6,26 +6,36 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Award, ExternalLink, Star, Code, Brain, Database, Shield } from 'lucide-react'
 import { useState } from 'react'
 
+import ibmThumbnail from '@/assets/certifications/ibm-ai-engineering.png'
+import postmanThumbnail from '@/assets/certifications/postman-api-fundamentals.png'
+//import oracleGenaiThumbnail from '@/assets/certifications/oracle-genai.png'
+import dockerThumbnail from '@/assets/certifications/ibm-docker-essentials.png'
+import oracleAiThumbnail from '@/assets/certifications/oracle-ai.png'
+
+
+
 const certifications = [
   {
     title: "IBM AI Engineering",
     issuer: "IBM",
     date: "2024",
     description: "Professional certificate covering machine learning, deep learning, and AI engineering practices.",
-    skills: ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch"],
+    skills: ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Computer Vision"],
     icon: Brain,
     color: "primary",
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
+    thumbnail: ibmThumbnail,
+    pdf: "/certifications/ibm-ai-engineering.pdf"
   },
   {
-    title: "Postman Student Developer",
+    title: "Postman API Fundamentals",
     issuer: "Postman",
     date: "2024",
     description: "API development and testing certification with hands-on experience in API design.",
     skills: ["API Development", "REST APIs", "Testing", "Documentation"],
     icon: Code,
     color: "secondary",
-    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+    thumbnail: postmanThumbnail,
+    pdf: "/certifications/postman-api-fundamentals.pdf"
   },
   {
     title: "IBM Docker Essentials",
@@ -35,7 +45,8 @@ const certifications = [
     skills: ["Docker", "Containerization", "DevOps", "Deployment"],
     icon: Shield,
     color: "accent",
-    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
+    thumbnail: dockerThumbnail,
+    pdf: "/certifications/ibm-docker-essentials.pdf"
   },
   {
     title: "Oracle GenAI",
@@ -45,7 +56,8 @@ const certifications = [
     skills: ["Generative AI", "LLMs", "Oracle Cloud", "AI Ethics"],
     icon: Brain,
     color: "primary",
-    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
+    thumbnail: oracleAiThumbnail,
+    pdf: "/certifications/oracle-ai.pdf"
   }
 ]
 
@@ -58,7 +70,7 @@ const awards = [
   },
   {
     title: "Semi-Finalist in YIP 2019",
-    description: "Young Innovator Program by TTK Bangalore",
+    description: "Young Innovator Program by IIT Kharagpur",
     year: "2019",
     icon: Star
   }
@@ -76,7 +88,7 @@ const skills = {
     "OpenCV", "Gymnasium"
   ],
   "Languages": [
-    "English", "Hindi", "Telugu", "Tamil", "Intermediate Indonesian", "Currently German"
+    "English", "Hindi", "Telugu", "Tamil", "Intermediate Indonesian", "Beginner German"
   ],
   "Volunteering": [
     "Part of management and MC teams for College fests", 
@@ -122,13 +134,21 @@ export default function Certifications() {
                             />
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-4xl">
+                        <DialogContent className="max-w-4xl h-[80vh]">
+                        {cert.pdf ? (
+                          <iframe
+                            src={cert.pdf}
+                            title={`${cert.title} certificate`}
+                            className="w-full h-full rounded-lg"
+                          />
+                        ) : (
                           <img 
                             src={cert.thumbnail} 
-                            alt={`${cert.title} certificate full size`}
+                            alt={`${cert.title} certificate`}
                             className="w-full h-auto rounded-lg"
                           />
-                        </DialogContent>
+                        )}
+                      </DialogContent>
                       </Dialog>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">

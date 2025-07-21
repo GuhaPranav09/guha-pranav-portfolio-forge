@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Scene3D } from '@/components/three/Scene3D'
-import { Mail, Phone, MapPin, Linkedin, Github, Send, ExternalLink } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Github, Send, ExternalLink, Code, Award} from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -36,7 +36,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="text-muted-foreground text-sm lg:text-base break-all">yelchuru.guhapranav2022@vitstudent.ac.in</p>
+                      <p className="text-muted-foreground text-sm lg:text-base break-all">yg.pranav@gmail.com | guhapranav2k5@gmail.com</p>
                     </div>
                   </div>
                   
@@ -80,7 +80,7 @@ export default function Contact() {
                   </a>
                   
                   <a 
-                    href="https://github.com/guhapranav" 
+                    href="https://github.com/GuhaPranav09" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 bg-muted rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-105"
@@ -91,26 +91,38 @@ export default function Contact() {
                   </a>
                   
                   <a 
-                    href="https://leetcode.com/guhapranav" 
+                    href="https://leetcode.com/u/GuhaPranav/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 bg-muted rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-105"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <Code className="w-5 h-5" />
                     <span className="font-medium">LeetCode</span>
                     <ExternalLink className="w-4 h-4 ml-auto" />
                   </a>
                   
                   <a 
-                    href="https://hackerrank.com/guhapranav" 
+                    href="https://www.hackerrank.com/profile/yg_pranav" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 bg-muted rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-105"
                   >
-                    <ExternalLink className="w-5 h-5" />
+                    <Code className="w-5 h-5" />
                     <span className="font-medium">HackerRank</span>
                     <ExternalLink className="w-4 h-4 ml-auto" />
                   </a>
+
+                  <a 
+                    href="https://www.credly.com/users/guha-pranav-yelchuru.5338eb0b" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-muted rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-105"
+                  >
+                    <Award className="w-5 h-5" />
+                    <span className="font-medium">Credly</span>
+                    <ExternalLink className="w-4 h-4 ml-auto" />
+                  </a>
+
                 </div>
               </Card>
 

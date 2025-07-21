@@ -102,7 +102,7 @@ export default function Education() {
           {/* Courses & Certifications Preview */}
           <div>
             <h2 className="text-3xl font-bold text-gradient-primary mb-8 text-center">
-              Relevant Coursework
+              Domain Knowledge
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="card-glow p-6 text-center">
@@ -110,7 +110,7 @@ export default function Education() {
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Data Structures & Algorithms</h3>
-                <p className="text-sm text-muted-foreground">Advanced problem-solving and optimization techniques</p>
+                <p className="text-sm text-muted-foreground">Advanced problem-solving and optimization techniques (Java, Python, C++)</p>
               </Card>
 
               <Card className="card-glow p-6 text-center">
@@ -118,7 +118,7 @@ export default function Education() {
                   <BookOpen className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Machine Learning</h3>
-                <p className="text-sm text-muted-foreground">Deep learning, neural networks, and AI algorithms</p>
+                <p className="text-sm text-muted-foreground">Deep learning, neural networks, Computer Vision and AI algorithms</p>
               </Card>
 
               <Card className="card-glow p-6 text-center">
@@ -126,7 +126,7 @@ export default function Education() {
                   <BookOpen className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Web Development</h3>
-                <p className="text-sm text-muted-foreground">Full-stack development with modern frameworks</p>
+                <p className="text-sm text-muted-foreground">Full-stack development with modern frameworks, Cloud deployment, AWS</p>
               </Card>
 
               <Card className="card-glow p-6 text-center">
@@ -134,7 +134,7 @@ export default function Education() {
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Database Management</h3>
-                <p className="text-sm text-muted-foreground">SQL, NoSQL, and database optimization</p>
+                <p className="text-sm text-muted-foreground">SQL, MongoDB, and database optimization</p>
               </Card>
 
               <Card className="card-glow p-6 text-center">
@@ -149,8 +149,8 @@ export default function Education() {
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Computer Networks</h3>
-                <p className="text-sm text-muted-foreground">Network protocols, security, and distributed systems</p>
+                <h3 className="font-semibold text-foreground mb-2">OS / Networks</h3>
+                <p className="text-sm text-muted-foreground">Operating Systems, Architectures, Scheduling, Network protocols, security, and distributed systems</p>
               </Card>
             </div>
           </div>

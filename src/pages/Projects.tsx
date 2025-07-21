@@ -77,10 +77,10 @@ const projects = [
 ]
 
 const projectStats = [
-  { label: "Projects Completed", value: "4+", color: "primary" },
-  { label: "Technologies Used", value: "15+", color: "secondary" },
-  { label: "AI/ML Projects", value: "3", color: "accent" },
-  { label: "Success Rate", value: "100%", color: "primary" }
+  { label: "Projects Completed", value: "5", color: "primary" },
+  { label: "Ongoing Projects", value: "2", color: "secondary" },
+  { label: "Technologies Used", value: "15+", color: "primary" },
+  { label: "Success Rate", value: "90%", color: "secondary" }
 ]
 
 export default function Projects() {
