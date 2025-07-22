@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Home, Briefcase, GraduationCap, Award, FolderOpen, Mail } from 'lucide-react'
+import { Menu, X, Home, Briefcase, GraduationCap, Award, FolderOpen, Mail, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const navItems = [
@@ -9,6 +9,7 @@ const navItems = [
   { name: 'Education', href: '/education', icon: GraduationCap },
   { name: 'Certifications', href: '/certifications', icon: Award },
   { name: 'Projects', href: '/projects', icon: FolderOpen },
+  { name: 'Extracurriculars', href: '/extracurriculars', icon: Star },
   { name: 'Contact', href: '/contact', icon: Mail },
 ]
 
