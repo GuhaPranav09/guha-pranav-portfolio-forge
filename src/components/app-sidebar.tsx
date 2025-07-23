@@ -24,7 +24,7 @@ const items = [
 ]
 
 export function AppSidebar() {
-  const { state } = useSidebar()
+  const { state, toggleSidebar } = useSidebar()
   const location = useLocation()
   const currentPath = location.pathname
   const collapsed = state === "collapsed"
@@ -38,6 +38,8 @@ export function AppSidebar() {
     <Sidebar
       className={collapsed ? "w-14" : "w-60"}
       collapsible="icon"
+      onMouseEnter={() => collapsed && toggleSidebar()}
+      onMouseLeave={() => !collapsed && toggleSidebar()}
     >
       <SidebarContent className="bg-card border-r border-border">
         {/* Logo Section */}
