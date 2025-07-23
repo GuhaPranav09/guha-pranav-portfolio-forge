@@ -12,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
       <div className="min-h-screen flex w-full bg-background">
         <AppSidebar />
         <div className="flex-1 flex flex-col">
-          <header className="h-12 flex items-center justify-between border-b border-border bg-card/50 backdrop-blur-md sticky top-0 z-40 px-4">
+          <header className="h-12 flex items-center justify-between border-b border-border bg-card/50 backdrop-blur-md sticky top-0 z-40 px-4 ml-0">
             <SidebarTrigger />
             <ThemeToggle />
           </header>

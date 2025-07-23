@@ -178,10 +178,10 @@ export default function Certifications() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {cert.skills.map((skill, skillIndex) => (
-                        <Badge 
-                          key={skillIndex} 
-                          className="bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                        >
+                         <Badge 
+                           key={skillIndex} 
+                           className="bg-muted text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                         >
                           {skill}
                         </Badge>
                       ))}
@@ -237,10 +237,10 @@ export default function Certifications() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, skillIndex) => (
-                      <Badge 
-                        key={skillIndex}
-                        className="bg-muted hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
-                      >
+                       <Badge 
+                         key={skillIndex}
+                         className="bg-muted text-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                       >
                         {skill}
                       </Badge>
                     ))}
