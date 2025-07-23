@@ -41,7 +41,7 @@ export function AppSidebar() {
     >
       <SidebarContent className="bg-card border-r border-border">
         {/* Logo Section */}
-        <div className="p-4 border-b border-border">
+        <div className="p-4">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">GP</span>

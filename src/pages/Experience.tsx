@@ -54,7 +54,7 @@ const experiences = [
 export default function Experience() {
   return (
     <Layout>
-      <div className="min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen px-4 sm:px-6 lg:px-8 pt-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">

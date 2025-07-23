@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Light Mode Colors */
-    --background: 220 25% 97%;
+    --background: 220 25% 96%;
     --foreground: 220 25% 10%;
     
     /* Card System */
@@ -28,8 +28,8 @@
     --secondary-foreground: 210 15% 95%;
     
     /* Muted Elements */
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 25% 40%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 25% 45%;
     
     /* Accent - Green Success */
     --accent: 150 80% 45%;
@@ -40,8 +40,8 @@
     --destructive-foreground: 210 15% 95%;
     
     /* Borders and Inputs */
-    --border: 220 15% 90%;
-    --input: 220 15% 95%;
+    --border: 220 15% 88%;
+    --input: 220 15% 93%;
     --ring: 195 100% 45%;
     
     --radius: 0.75rem;
