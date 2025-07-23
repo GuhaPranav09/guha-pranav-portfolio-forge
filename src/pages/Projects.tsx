@@ -15,12 +15,12 @@ const projects = [
     type: "Web Application",
     status: "Completed",
     link: "#",
-    github: "#",
+    github: "https://github.com/GuhaPranav09/DSA_ERP_ONLINE",
     details: {
-      challenge: "Building a scalable ERP system to manage complex organizational workflows and data relationships.",
+      challenge: "Building a scalable ERP system to manage complex organizational workflows and data.",
       solution: "Implemented a modular architecture with separate modules for different business functions, ensuring scalability and maintainability.",
       keyFeatures: ["User Management", "Role-based Access Control", "Real-time Dashboard", "Data Analytics", "Report Generation"],
-      duration: "6 months",
+      duration: "2 months",
       teamSize: "Solo Project"
     }
   },
@@ -32,29 +32,29 @@ const projects = [
     type: "AI/ML Project",
     status: "Completed",
     link: "#",
-    github: "#",
+    github: "https://github.com/GuhaPranav09/LunarLander",
     details: {
-      challenge: "Training an AI agent to successfully land a spacecraft in varying environmental conditions.",
-      solution: "Implemented DQN with experience replay and target networks to achieve stable learning and high success rates.",
+      challenge: "Training an AI agent to successfully land a spacecraft in varying environmental conditions (Here on the moon).",
+      solution: "Implemented a DQN Agent with experience replay and target networks to achieve stable learning and high success rates.",
       keyFeatures: ["Autonomous Navigation", "Real-time Decision Making", "Environmental Adaptation", "Performance Analytics"],
-      duration: "4 months",
-      teamSize: "Solo Project"
+      duration: "3 months",
+      teamSize: "2 developers"
     }
   },
   {
     title: "AI Healthcare Chatbot",
-    description: "AI-powered chatbot using Python, NLTK, Flask, and TensorFlow to assist users with basic healthcare queries. Features HuggingFace LLM fine-tuned with LLAMA format healthcare data. Includes world-word response generation and real-time interaction.",
+    description: "AI-powered chatbot using Python, NLTK, Flask, and TensorFlow to assist users with basic healthcare queries. Features HuggingFace LLM fine-tuned with LLAMA format healthcare data. Includes world-word response generation and real-time interaction. Multilingual and Speech-to-Text support.",
     technologies: ["Python", "NLTK", "Flask", "TensorFlow", "HuggingFace", "LLAMA"],
     icon: MessageSquare,
     type: "AI/ML Project",
     status: "Completed",
     link: "#",
-    github: "#",
+    github: "https://github.com/GuhaPranav09/AI_Healthcare_Chatbot",
     details: {
-      challenge: "Creating an accurate and reliable healthcare assistant while ensuring safety and privacy.",
-      solution: "Fine-tuned LLM with medical data and implemented safety filters to provide accurate, helpful responses.",
-      keyFeatures: ["Natural Language Processing", "Medical Query Understanding", "Safe Response Generation", "Real-time Chat"],
-      duration: "5 months",
+      challenge: "Creating an accurate and reliable healthcare assistant while ensuring safety and accessibility.",
+      solution: "Fine-tuned LLM with medical data and implemented safety filters to provide accurate, helpful responses. Integrated multilingual support and speech-to-text capabilities for broader accessibility.",
+      keyFeatures: ["Natural Language Processing", "LLM Fine-tuning", "Medical Query Understanding", "Multilingual support", "Real-time Chat", "Speech-to-Text"],
+      duration: "2 months",
       teamSize: "2 developers"
     }
   },
@@ -66,12 +66,12 @@ const projects = [
     type: "Computer Vision",
     status: "Completed",
     link: "#",
-    github: "#",
+    github: "https://github.com/GuhaPranav09/YOLO_Basketball_Analysis",
     details: {
-      challenge: "Accurately tracking multiple players in real-time from video footage with varying lighting and camera angles.",
-      solution: "Combined YOLOv8 for detection with DeepSORT for tracking, creating a robust multi-object tracking system.",
+      challenge: "Accurately tracking multiple players in real-time from video footage and analyzing their performance.",
+      solution: "Combined YOLOv8 for detection with DeepSORT for tracking, creating a robust multi-object tracking system. Implemented heatmap generation and performance analytics based on player movements.",
       keyFeatures: ["Player Detection", "Multi-object Tracking", "Heat Map Generation", "Performance Analytics", "Team Classification"],
-      duration: "3 months",
+      duration: "4 months",
       teamSize: "Solo Project"
     }
   }
@@ -81,7 +81,7 @@ const projectStats = [
   { label: "Projects Completed", value: "5", color: "primary" },
   { label: "Ongoing Projects", value: "2", color: "secondary" },
   { label: "Technologies Used", value: "15+", color: "primary" },
-  { label: "Success Rate", value: "90%", color: "secondary" }
+  { label: "Mini Projects", value: "10+", color: "secondary" }
 ]
 
 export default function Projects() {
@@ -176,21 +176,24 @@ export default function Projects() {
 
                       {/* Project Actions */}
                       <div className="lg:col-span-3 flex flex-col gap-3">
-                        <Button 
+                        {/* <Button 
                           className="btn-hero w-full"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           View Project
-                        </Button>
-                        <Button 
-                          variant="outline" 
-                          className="w-full"
+                        </Button> */}
+                       <Button asChild variant="outline" className="w-full">
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <Github className="w-4 h-4 mr-2" />
                           Source Code
-                        </Button>
+                        </a>
+                      </Button>
                       </div>
                     </div>
                   </div>
@@ -245,7 +248,7 @@ export default function Projects() {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center mb-16">
             <Card className="card-glow p-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
               <h3 className="text-2xl font-bold text-gradient-primary mb-4">
                 Interested in My Work?

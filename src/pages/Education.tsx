@@ -34,7 +34,7 @@ export default function Education() {
                   </h4>
                   <div className="flex flex-wrap gap-4 mb-4">
                     <Badge className="bg-accent text-accent-foreground">
-                      Sep 2022 - Present
+                      September 2022 - Present
                     </Badge>
                     <Badge className="bg-primary text-primary-foreground">
                       CGPA: 9.47
@@ -99,8 +99,8 @@ export default function Education() {
             </Card>
           </div>
 
-          {/* Courses & Certifications Preview */}
-          <div>
+          {/* Courses Preview */}
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-gradient-primary mb-8 text-center">
               Domain Knowledge
             </h2>

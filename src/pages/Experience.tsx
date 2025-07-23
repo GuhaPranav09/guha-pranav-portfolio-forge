@@ -6,7 +6,7 @@ import { CalendarDays, MapPin, ExternalLink } from 'lucide-react'
 const experiences = [
   {
     title: "AI Software Intern",
-    company: "Deepcoat AI",
+    company: "Deepcept AI",
     location: "Remote",
     period: "June 2025 - Present",
     description: "Studied and worked on Computer Vision tasks, including YOLO and Pose detection. Working on Productivity Monitoring Systems.",
@@ -16,8 +16,8 @@ const experiences = [
   {
     title: "Research Intern",
     company: "Samsung PRISM (Project)",
-    location: "Remote",
-    period: "Nov 2024 - Present",
+    location: "Hybrid",
+    period: "November 2024 - June 2025",
     description: "Worked on Advanced Echo Cancellation using Deep Learning. Used Conformer layers and multi-task learning to achieve PESQ of 3.6+ and ERLE of 25db+ over complex noise induced audiosets.",
     technologies: ["Deep Learning", "Audio Processing", "Conformer", "Multi-task Learning"],
     type: "current"
@@ -25,8 +25,8 @@ const experiences = [
   {
     title: "Developer Intern",
     company: "Zuntra Digital",
-    location: "Remote",
-    period: "Aug 2024 - Dec 2024",
+    location: "Hybrid",
+    period: "August 2024 - Decemeber 2024",
     description: "Worked on Frontend Website development using WordPress and HTML. Co-designed the web page for a few products. Reduced page load time by 30% and improved layout architecture.",
     technologies: ["WordPress", "HTML", "Frontend Development", "Performance Optimization"],
     type: "past"
@@ -35,7 +35,7 @@ const experiences = [
     title: "Intern",
     company: "HCL Technologies",
     location: "Remote",
-    period: "June 2024 - July 2024 (3pm - 8pm)",
+    period: "June 2024 - July 2024 (Part-time)",
     description: "Studied and worked on Site Reliability Engineering (SLO, SLI). Got introduced to Cyra/ace and microservice advanced service level dashboards. Revised on ReactJS via tasks.",
     technologies: ["Site Reliability Engineering", "ReactJS", "Microservices", "Cyra/ace"],
     type: "past"
@@ -43,8 +43,8 @@ const experiences = [
   {
     title: "Intern",
     company: "CoreNuts Technologies",
-    location: "Remote",
-    period: "June 2024 - July 2024 (8am - 2pm)",
+    location: "Onsite",
+    period: "June 2024 - July 2024 (Part-time)",
     description: "Created Java classes with over 1500 lines of modular java code according to requirements and contributed to the Student Management Portal project. Improved system efficiency by 25% through optimized data structures.",
     technologies: ["Java", "Object-Oriented Programming", "Data Structures", "Student Management System"],
     type: "past"
@@ -121,7 +121,7 @@ export default function Experience() {
           </div>
 
           {/* Summary Stats */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6  mb-16">
             <Card className="card-glow text-center p-6">
               <h3 className="text-3xl font-bold text-gradient-primary mb-2">5</h3>
               <p className="text-muted-foreground">Companies</p>

@@ -30,7 +30,7 @@ const certifications = [
     title: "Postman API Fundamentals",
     issuer: "Postman",
     date: "2024",
-    description: "API development and testing certification with hands-on experience in API design.",
+    description: "API development and testing certification with hands-on experience.",
     skills: ["API Development", "REST APIs", "Testing", "Documentation"],
     icon: Code,
     color: "secondary",
@@ -49,10 +49,10 @@ const certifications = [
     pdf: "/certifications/ibm-docker-essentials.pdf"
   },
   {
-    title: "Oracle GenAI",
+    title: "Oracle AI Foundations Associate",
     issuer: "Oracle",
     date: "2024",
-    description: "Generative AI and large language model implementation and optimization.",
+    description: "AI and large language model implementation and optimization using Oracle Cloud OCI.",
     skills: ["Generative AI", "LLMs", "Oracle Cloud", "AI Ethics"],
     icon: Brain,
     color: "primary",
@@ -221,7 +221,7 @@ export default function Certifications() {
           </div>
 
           {/* Skills Section */}
-          <div>
+          <div className="mb-16">
             <h2 className="text-3xl font-bold text-gradient-primary mb-8 text-center">
               Technical Skills & Expertise
             </h2>
